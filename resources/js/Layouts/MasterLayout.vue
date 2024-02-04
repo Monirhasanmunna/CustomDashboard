@@ -1,11 +1,41 @@
 <script setup>
+import HeaderLayout from '@/Layouts/HeaderLayout.vue';
+import SidebarLayout from '@/Layouts/SidebarLayout.vue'
+import { Head,Link } from '@inertiajs/vue3';
+import customJs from '@/assets/custom.js';
+import {onMounted} from 'vue';
 
+
+onMounted(() => {
+    customJs();
+
+    setTimeout(() => {
+      window.HSStaticMethods.autoInit();
+    });
+});
 </script>
 
 <template>
-<slot></slot>
+<div class="main-wrapper">
+    <HeaderLayout/>    
+    <div class="body flex justify-start">
+        <SidebarLayout/>  
+        <div class="right w-full">
+            <main>
+                <div class="w-full min-h-[900px] bg-gray-300 p-5">
+                    <div class="shadow-md h-screen">
+                        <slot></slot>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
 </template>
 
 <style scoped>
+.sidebar {
+    transition: min-width 0.3s; /* Optional: Add a smooth transition effect */
+  }
 
 </style>
