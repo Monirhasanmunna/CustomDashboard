@@ -16,6 +16,8 @@ onMounted(() => {
 </script>
 
 <template>
+    <Head title="Dashboard"/>
+    
 <div class="main-wrapper">
     <HeaderLayout/>    
     <div class="body flex justify-start">
