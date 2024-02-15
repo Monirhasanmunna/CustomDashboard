@@ -22,7 +22,7 @@ onMounted(() => {
         <SidebarLayout/>  
         <div class="right w-full">
             <main>
-                <div class="w-full min-h-[900px] bg-gray-300 p-5">
+                <div class="w-full min-h-[900px] bg-gray-200 dark:bg-slate-900 p-5">
                     <div class="shadow-md h-screen">
                         <slot></slot>
                     </div>
