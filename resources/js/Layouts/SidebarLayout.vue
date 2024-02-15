@@ -3,12 +3,12 @@
 </script>
 
 <template>
-    <div id="sidebar" class="sidebar h-screen w-[0px] sm:min-w-[250px] bg-gray-400 dark:bg-gray-800">
+    <div id="sidebar" class="sidebar w-[0px] sm:min-w-[250px] bg-gray-200 dark:bg-gray-800 fixed h-full overflow-hidden overflow-y-auto">
         <nav class="hs-accordion-group p-6 w-full flex flex-col flex-wrap" data-hs-accordion-always-open>
-            <ul class="space-y-2.5">
-                <li>
+            <ul class="space-y-2.5 text-sm text-slate-800 dark:text-white">
+                <li class="hover:cursor-pointer">
                     <Link
-                        class="flex items-center gap-x-3.5 py-2 px-2.5  bg-gray-100 text-sm text-slate-700 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 dark:text-white dark:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                        class="flex items-center gap-x-3.5 py-2 px-2.5  bg-gray-100  rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600  dark:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                         :class="{'bg-gray-300 dark:bg-gray-900': $page.url === '/dashboard' || $page.url.startsWith('/dashboard?')}">
                     <svg class="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -19,10 +19,10 @@
                     </Link>
                 </li>
 
-                <li class="hs-accordion space-y-1" :class="{ 'active': $page.url.startsWith('/application') }"
+                <li class="hs-accordion space-y-1 hover:cursor-pointer" :class="{ 'active': $page.url.startsWith('/application') }"
                     id="account-accordion">
                     <button type="button"
-                        class="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-600 dark:text-slate-400 dark:hover:text-slate-300 dark:hs-accordion-active:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                        class="hs-accordion-toggle w-full text-start flex items-center gap-x-3.5 py-2 px-2.5 hs-accordion-active:text-blue-600 hs-accordion-active:hover:bg-transparent text-sm rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-600 dark:hover:text-slate-300 dark:hs-accordion-active:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                         :class="{'ring-1 ring-gray-400 dark:ring-gray-600': $page.url.startsWith('/application') }">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" height="18" width="18">
