@@ -23,9 +23,9 @@ onMounted(() => {
     <div class="body flex justify-start">
         <SidebarLayout/>  
         <div class="right w-full">
-            <main>
+            <main >
                 <div class="w-full min-h-[900px] bg-gray-200 dark:bg-slate-900 p-5">
-                    <div class="shadow-md h-screen">
+                    <div id="bodyCard" class="shadow-md h-screen bg-white md:ml-[250px] rounded-md">
                         <slot></slot>
                     </div>
                 </div>
@@ -40,4 +40,7 @@ onMounted(() => {
     transition: min-width 0.3s; /* Optional: Add a smooth transition effect */
   }
 
+  #bodyCard {
+    transition: margin-left 0.3s; /* Optional: Add a smooth transition effect */
+  }
 </style>
