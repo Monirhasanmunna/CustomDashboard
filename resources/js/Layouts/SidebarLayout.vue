@@ -4,7 +4,7 @@
 
 <template>
     <div id="sidebar" class="sidebar w-[0px] sm:min-w-[250px] bg-[#f5f7f9] shadow-xl shadow-blue-300 dark:bg-gray-800 fixed h-full overflow-hidden overflow-y-auto">
-        <nav class="hs-accordion-group p-6 w-full flex flex-col flex-wrap" data-hs-accordion-always-open>
+        <nav class="hs-accordion-group p-6 w-full h-full flex flex-col flex-wrap" data-hs-accordion-always-open>
             <ul class="space-y-2.5 text-sm text-slate-800 dark:text-white">
                 <li class="hover:cursor-pointer">
                     <Link
