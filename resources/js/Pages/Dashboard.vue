@@ -1,12 +1,14 @@
 <script setup>
-    import MasterLayout from '@/Layouts/MasterLayout.vue';
+import Box from '@/Components/Box.vue';
+import MasterLayout from '@/Layouts/MasterLayout.vue';
 </script>
 
 <template>
     <Head title="Dashboard" />
     <MasterLayout>
-        <h1 class="text-green-600 flex justify-center">Body</h1>
-
+        <Box>
+            <h3>Hello</h3>
+        </Box>
     </MasterLayout>
 </template>
 
